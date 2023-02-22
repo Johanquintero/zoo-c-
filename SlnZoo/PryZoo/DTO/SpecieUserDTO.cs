@@ -10,7 +10,6 @@ namespace Zoo.DTO
             this.id = id;
             this.specie = specie;
             this.user = user;
-
         }
 }
 }
