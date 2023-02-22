@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.json
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.exe
@@ -25,3 +26,32 @@ C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\Pry
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.pdb
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.genruntimeconfig.cache
 C:\Users\pined\OneDrive\Escritorio\Universidad\linea de enfasis 2\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\ref\PryZoo.dll
+=======
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.Development.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.exe
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.deps.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.runtimeconfig.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.pdb
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Microsoft.OpenApi.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.AssemblyReference.cache
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.GeneratedMSBuildEditorConfig.editorconfig
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.AssemblyInfoInputs.cache
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.AssemblyInfo.cs
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.CoreCompileInputs.cache
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.MvcApplicationPartsAssemblyInfo.cs
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.MvcApplicationPartsAssemblyInfo.cache
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\staticwebassets.build.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\staticwebassets.development.json
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\scopedcss\bundle\PryZoo.styles.css
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.CopyComplete
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\refint\PryZoo.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.pdb
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.genruntimeconfig.cache
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\ref\PryZoo.dll
+>>>>>>> 40d332aafd22390cda851756d07d0f789181e6b6
