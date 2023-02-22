@@ -6,14 +6,14 @@ namespace Zoo.DTO
         public string name { get; set; }
         public string scientific_name { get; set; }
         public string description { get; set; }
-        public ZoneDTO zone { get; set; }
-        public SpecieDTO(int id, string name,string scientific_name, string description, ZoneDTO zone)
+        public ZoneDTO zone_id { get; set; }
+        public SpecieDTO(int id, string name,string scientific_name, string description, ZoneDTO zone_id)
         {
             this.id = id;
             this.name = name;
             this.scientific_name = scientific_name;
             this.description = description;
-            this.zone = zone;
+            this.zone_id = zone_id;
         }
     }
 

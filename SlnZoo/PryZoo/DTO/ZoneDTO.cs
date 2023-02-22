@@ -5,7 +5,6 @@ namespace Zoo.DTO
         public int id { get; set; }
         public string name { get; set; }
         public float extension { get; set; }
-
         public ZoneDTO(int id, string name, float extension)
         {
             this.id = id;
