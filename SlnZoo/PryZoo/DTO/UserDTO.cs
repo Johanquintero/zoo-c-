@@ -7,15 +7,15 @@ namespace Zoo.DTO
         public string address { get; set; }
         public string phone { get; set; }
         public Datetime date_entry { get; set; }
-        public UserType user_type_id { get; set; }
-        public User(int id, string name, string address, string phone, Datime date_entry, UserType user_type_id)
+        public UserType user_type { get; set; }
+        public User(int id, string name, string address, string phone, Datime date_entry, UserType user_type)
         {
             this.id = id;
             this.name = name;
             this.address = address;
             this.phone = phone;
             this.date_entry = date_entry;
-            this.user_type_id = user_type_id;
+            this.user_type = user_type;
         }
     }
 }
