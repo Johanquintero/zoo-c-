@@ -21,8 +21,8 @@ namespace Zoo.Models
             // return responseBD;
             JArray array = JArray.Parse(responseBD.data);
             JObject zon = JObject.Parse(Convert.ToString(array[0]));
-            zone.id = Convert.ToString(zon["zone_id"]);
-            return new ResponseDTO(true,JsonConvert.SerializeObject(zone),"");
+            zone.id = Convert.ToString(zon["id"]);
+            return new ResponseDTO(true,JsonConvert.SerializeObject(zon),"");
         }
     }
 }
