@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Zoo.DTO;
+using Zoo.Models;
 
 namespace Zoo.Controllers
 {
@@ -9,13 +10,18 @@ namespace Zoo.Controllers
     {
         public UserController() { }
 
-        [HttpGet("get-user")]
+        [HttpGet("get-users")]
         public async Task<IActionResult> GetUsers()
         {
-            UserTypeDTO user_type = new UserTypeDTO("1", "cuidador");
-            UserDTO user = new UserDTO("1", "jesus", "sancancio", "3215841916", DateTime.Now, user_type);
-            return Ok(user);
+            // UserDTO User = new UserDTO("1","Marina",5000);
+            return Ok(1);
         }
 
+        [HttpPost("add-user")]
+        public async Task<IActionResult> AddUsers(UserDTO User)
+        {
+            MUser mUser = new MUser();
+            return Ok(mUser.AddUser(User));
+        }
     }
 }
