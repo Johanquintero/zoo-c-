@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Zoo.DTO;
+using Zoo.Models;
 
 namespace Zoo.Controllers
 {
@@ -16,5 +17,11 @@ namespace Zoo.Controllers
             return Ok(zone);
         }
 
+        [HttpPost("add-zones")]
+        public async Task<IActionResult> AddZones(ZoneDTO zone)
+        {
+            MZone mZone = new MZone();
+            return Ok(mZone.AddZone(zone));
+        }
     }
 }

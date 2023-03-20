@@ -55,3 +55,5 @@ E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\ne
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.genruntimeconfig.cache
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\net6.0\ref\PryZoo.dll
 >>>>>>> 40d332aafd22390cda851756d07d0f789181e6b6
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Newtonsoft.Json.dll
+E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Npgsql.dll
