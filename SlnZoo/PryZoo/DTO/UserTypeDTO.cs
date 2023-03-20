@@ -2,9 +2,9 @@ namespace Zoo.DTO
 {
     public class UserTypeDTO
     {
-        public int id { get; set; }
+        public string? id { get; set; }
         public string name { get; set; }
-        public UserTypeDTO(int id, string name)
+        public UserTypeDTO(string? id, string name)
         {
             this.id = id;
             this.name = name;

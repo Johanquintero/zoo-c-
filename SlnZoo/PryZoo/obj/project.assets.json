@@ -418,19 +418,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pined\\.nuget\\packages\\": {}
+    "C:\\Users\\quint\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo\\PryZoo.csproj",
+      "projectUniqueName": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\SlnZoo\\PryZoo\\PryZoo.csproj",
       "projectName": "PryZoo",
-      "projectPath": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo\\PryZoo.csproj",
-      "packagesPath": "C:\\Users\\pined\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo\\obj\\",
+      "projectPath": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\SlnZoo\\PryZoo\\PryZoo.csproj",
+      "packagesPath": "C:\\Users\\quint\\.nuget\\packages\\",
+      "outputPath": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\SlnZoo\\PryZoo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\pined\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

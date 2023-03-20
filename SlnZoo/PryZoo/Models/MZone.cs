@@ -22,7 +22,7 @@ namespace Zoo.Models
             JArray array = JArray.Parse(responseBD.data);
             JObject zon = JObject.Parse(Convert.ToString(array[0]));
             zone.id = Convert.ToString(zon["id"]);
-            return new ResponseDTO(true,JsonConvert.SerializeObject(zon),"");
+            return new ResponseDTO(true,JsonConvert.SerializeObject(zone),"");
         }
     }
 }

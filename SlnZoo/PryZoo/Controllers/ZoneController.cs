@@ -17,7 +17,7 @@ namespace Zoo.Controllers
             return Ok(zone);
         }
 
-        [HttpPost("add-zones")]
+        [HttpPost("add-zone")]
         public async Task<IActionResult> AddZones(ZoneDTO zone)
         {
             MZone mZone = new MZone();
