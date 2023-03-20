@@ -14,7 +14,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddHabitat(HabitatDTO Habitat)
         {
-            String queryInsert = "INSERT INTO public.habitats(name,weather) VALUES ('"+Habitat.name+"','"+Habitat.weather+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.habitats(name,weather,vegetation_type_id) VALUES ('"+Habitat.name+"','"+Habitat.weather+"','"+Habitat.vegetation_type.id+"') RETURNING *";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 

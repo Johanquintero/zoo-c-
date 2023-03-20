@@ -14,7 +14,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddSpecie(SpecieDTO Specie)
         {
-            String queryInsert = "INSERT INTO public.species(scientific_name,description) VALUES ('"+Specie.scientific_name+"','"+Specie.description+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.species(scientific_name,description,zone_id) VALUES ('"+Specie.scientific_name+"','"+Specie.description+"','"+Specie.zone.id+"') RETURNING *";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 

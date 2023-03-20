@@ -8,7 +8,7 @@ namespace Zoo.DTO
         public string phone { get; set; }
         public string date_entry { get; set; }
         public UserTypeDTO user_type { get; set; }
-        public UserDTO(string? id, string name, string address, string phone, string date_entry, UserTypeDTO? user_type)
+        public UserDTO(string? id, string name, string address, string phone, string date_entry, UserTypeDTO user_type)
         {
             this.id = id;
             this.name = name;

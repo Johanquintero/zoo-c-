@@ -14,7 +14,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddUser(UserDTO User)
         {
-            String queryInsert = "INSERT INTO public.users(name,address, phone, date_entry) VALUES ('"+User.name+"','"+User.address+"','"+User.phone+"','"+User.date_entry+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.users(name,address, phone, date_entry,user_type_id) VALUES ('"+User.name+"','"+User.address+"','"+User.phone+"','"+User.date_entry+"','"+User.user_type.id+"') RETURNING *";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 

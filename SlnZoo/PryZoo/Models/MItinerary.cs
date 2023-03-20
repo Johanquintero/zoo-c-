@@ -14,7 +14,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddItinerary(ItineraryDTO Itinerary)
         {
-            String queryInsert = "INSERT INTO public.itineraries(init_datetime,end_datetime, distance, visitors) VALUES ('"+Itinerary.init_datetime+"','"+Itinerary.end_datetime+"','"+Itinerary.distance+"','"+Itinerary.visitors+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.itineraries(init_datetime,end_datetime, distance, visitors,user_id) VALUES ('"+Itinerary.init_datetime+"','"+Itinerary.end_datetime+"','"+Itinerary.distance+"','"+Itinerary.visitors+"','"+Itinerary.user.id+"') RETURNING *";
             Console.WriteLine(queryInsert);
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
