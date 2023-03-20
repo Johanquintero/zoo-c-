@@ -57,3 +57,32 @@ E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\obj\Debug\ne
 >>>>>>> 40d332aafd22390cda851756d07d0f789181e6b6
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Newtonsoft.Json.dll
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\SlnZoo\PryZoo\bin\Debug\net6.0\Npgsql.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.AssemblyReference.cache
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.AssemblyInfoInputs.cache
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.AssemblyInfo.cs
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.CoreCompileInputs.cache
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\refint\PryZoo.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.pdb
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\appsettings.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.exe
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.deps.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.runtimeconfig.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\PryZoo.pdb
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Npgsql.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\scopedcss\bundle\PryZoo.styles.css
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.csproj.CopyComplete
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.genruntimeconfig.cache
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\obj\Debug\net6.0\ref\PryZoo.dll
