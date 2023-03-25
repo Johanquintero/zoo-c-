@@ -13,7 +13,7 @@ namespace Zoo.Controllers
         [HttpGet("get-zones")]
         public async Task<IActionResult> GetZones()
         {
-            ZoneDTO zone = new ZoneDTO("1","Marina",5000);
+            ZoneDTO zone = new ZoneDTO("1", "Marina", 5000);
             return Ok(zone);
         }
 
@@ -23,5 +23,14 @@ namespace Zoo.Controllers
             MZone mZone = new MZone();
             return Ok(mZone.AddZone(zone));
         }
+
+        [HttpPut("update-zone/{id}")]
+        public async Task<IActionResult> UpdateZone(int id, ZoneUpdateDTO zoneUpdate)
+        {
+            MZone mZone = new MZone();
+            return Ok(mZone.UpdateZone(id,zoneUpdate));
+
+        }
+
     }
 }

@@ -29,7 +29,7 @@ namespace Zoo.Models
 
                 var datatable = new DataTable();
                 datatable.Load(dr);
-                response .data = JsonConvert.SerializeObject(datatable);
+                response.data = JsonConvert.SerializeObject(datatable);
 
                 return response;
             }
