@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Zoo.DTO;
 using Zoo.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace Zoo.Controllers
 {
