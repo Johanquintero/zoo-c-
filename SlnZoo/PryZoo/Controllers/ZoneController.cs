@@ -29,7 +29,6 @@ namespace Zoo.Controllers
         {
             MZone mZone = new MZone();
             return Ok(mZone.UpdateZone(id,zoneUpdate));
-
         }
 
     }

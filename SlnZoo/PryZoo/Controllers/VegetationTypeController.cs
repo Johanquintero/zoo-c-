@@ -13,7 +13,7 @@ namespace Zoo.Controllers
         [HttpGet("get-vegetation-types")]
         public async Task<IActionResult> GetVegetationTypes()
         {
-            VegetationTypeDTO vT = new VegetationTypeDTO("1","Marina","asdasd");
+            VegetationTypeDTO vT = new VegetationTypeDTO("1", "Marina", "asdasd");
             return Ok(vT);
         }
 
@@ -22,6 +22,13 @@ namespace Zoo.Controllers
         {
             MVegetationType mVegetationType = new MVegetationType();
             return Ok(mVegetationType.AddVegetationType(vegetationType));
+        }
+
+        [HttpPut("update-vegetation-type/{id}")]
+        public async Task<IActionResult> UpdateVegetationType(int id, VegetationTypeUpdateDTO vtUptade)
+        {
+            MVegetationType mVegetationType = new MVegetationType();
+            return Ok(mVegetationType.UpdateVegetationType(id, vtUptade));
         }
     }
 }
