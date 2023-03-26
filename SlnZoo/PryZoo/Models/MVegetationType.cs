@@ -1,5 +1,5 @@
 using Zoo.DTO;
-using Zoo.Models;
+using Zoo.Functions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -26,19 +26,14 @@ namespace Zoo.Models
         }
         public ResponseDTO UpdateVegetationType(int id, VegetationTypeUpdateDTO vtUpdate)
         {
-            JObject vt = JObject.Parse(JsonConvert.SerializeObject(vtUpdate));
-            Boolean is_name = !String.IsNullOrEmpty(Convert.ToString(vt["name"]));
-            Boolean is_description = !String.IsNullOrEmpty(Convert.ToString(vt["description"]));
-
-            String queryUpdate = "UPDATE public.vegetation_types SET " +
-            (is_name ? $"name = '{vt["name"]}'" : "") +
-            (is_description ? (is_name ? "," : "") + $" description = '{vt["description"]}' " : "") +
-            " WHERE id = '" + id + "' ";
+            ZooFunctions zF = new ZooFunctions();
+            
+            Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(vtUpdate));
+            String queryUpdate = zF.GenerateUpdateQuery("vegetation_types", id, listTemp);
 
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryUpdate);
             return new ResponseDTO(true, JsonConvert.SerializeObject(vtUpdate), "");
-
         }
 
         public ResponseDTO DeleteVegetationType(int id)
