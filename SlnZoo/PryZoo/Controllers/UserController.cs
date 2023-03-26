@@ -23,5 +23,19 @@ namespace Zoo.Controllers
             MUser mUser = new MUser();
             return Ok(mUser.AddUser(User));
         }
+
+        [HttpPut("update-user/{id}")]
+        public async Task<IActionResult> UpdateUser(int id, UserUpdateDTO userUpdateDTO)
+        {
+            MUser mUser = new MUser();
+            return Ok(mUser.UpdateUser(id, userUpdateDTO));
+        }
+
+        [HttpPut("delete-user/{id}")]
+        public async Task<IActionResult> DeleteUser(int id)
+        {
+            MUser mUser = new MUser();
+            return Ok(mUser.DeleteUser(id));
+        }
     }
 }

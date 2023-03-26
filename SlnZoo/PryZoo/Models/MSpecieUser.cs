@@ -1,4 +1,5 @@
 using Zoo.DTO;
+using Zoo.Functions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -20,6 +21,26 @@ namespace Zoo.Models
             JObject su = JObject.Parse(Convert.ToString(array[0]));
             SpecieUser.id = Convert.ToString(su["id"]);
             return new ResponseDTO(true,JsonConvert.SerializeObject(SpecieUser),"");
+        }
+
+        public ResponseDTO UpdateSpecieUsers(int id, SpecieUserUpdateDTO specieUserUpdateDTO)
+        {
+            ZooFunctions zF = new ZooFunctions();
+
+            Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(specieUserUpdateDTO));
+            String queryUpdate = zF.GenerateUpdateQuery("specie_users", id, listTemp);
+
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryUpdate);
+            return new ResponseDTO(true, JsonConvert.SerializeObject(specieUserUpdateDTO), "");
+        }
+
+        public ResponseDTO DeleteSpecieUsers(int id)
+        {
+            String queryDelete = "DELETE FROM public.specie_users WHERE id = '" + id + "' ";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryDelete);
+            return new ResponseDTO(true, "", "");
         }
     }
 }

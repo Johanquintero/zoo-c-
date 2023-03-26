@@ -31,6 +31,9 @@ namespace Zoo.Models
 
             Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(userType));
             String queryUpdate = zF.GenerateUpdateQuery("user_types", id, listTemp);
+
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryUpdate);
             return new ResponseDTO(true, JsonConvert.SerializeObject(userType), "");
         }
 

@@ -23,5 +23,19 @@ namespace Zoo.Controllers
             MSpecieUser mSpecieUser = new MSpecieUser();
             return Ok(mSpecieUser.AddSpecieUser(SpecieUser));
         }
+
+         [HttpPut("update-specie-user/{id}")]
+        public async Task<IActionResult> UpdateSpecieUsers(int id, SpecieUserUpdateDTO specieUserUpdateDTO)
+        {
+            MSpecieUser mSpecieUser = new MSpecieUser();
+            return Ok(mSpecieUser.UpdateSpecieUsers(id, specieUserUpdateDTO));
+        }
+
+        [HttpPut("delete-specie-user/{id}")]
+        public async Task<IActionResult> DeleteSpecieUsers(int id)
+        {
+            MSpecieUser mSpecieUser = new MSpecieUser();
+            return Ok(mSpecieUser.DeleteSpecieUsers(id));
+        }
     }
 }

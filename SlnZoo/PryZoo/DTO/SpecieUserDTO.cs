@@ -1,5 +1,3 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace Zoo.DTO
 {
     public class SpecieUserDTO
@@ -12,6 +10,17 @@ namespace Zoo.DTO
             this.id = id;
             this.specie = specie;
             this.user = user;
+        }
+    }
+
+    public class SpecieUserUpdateDTO
+    {
+        public string? specie_id { get; set; }
+        public string? user_id { get; set; }
+        public SpecieUserUpdateDTO(string? specie_id, string? user_id)
+        {
+            this.specie_id = specie_id;
+            this.user_id = user_id;
         }
     }
 }
