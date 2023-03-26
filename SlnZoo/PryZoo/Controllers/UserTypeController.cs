@@ -24,5 +24,20 @@ namespace Zoo.Controllers
             return Ok(mUserType.AddUserType(userType));
         }
 
+         [HttpPut("update-user-type/{id}")]
+        public async Task<IActionResult> UpdateUserType(int id, UserTypeDTO userType)
+        {
+            MUserType mUserType = new MUserType();
+            return Ok(mUserType.UpdateUserType(id, userType));
+        }
+
+
+        [HttpDelete("delete-user-type/{id}")]
+        public async Task<IActionResult> DeleteUserType(int id)
+        {
+            MUserType mUserType = new MUserType();
+            return Ok(mUserType.DeleteUserType(id));
+        }
+
     }
 }

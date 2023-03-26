@@ -10,4 +10,5 @@ namespace Zoo.DTO
             this.name = name;
         }
     }
+    
 }

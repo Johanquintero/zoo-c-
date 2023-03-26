@@ -1,5 +1,5 @@
 using Zoo.DTO;
-using Zoo.Models;
+using Zoo.Functions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -27,22 +27,19 @@ namespace Zoo.Models
 
         public ResponseDTO UpdateUserType(int id, UserTypeDTO userType)
         {
-            JObject vt = JObject.Parse(JsonConvert.SerializeObject(userType));
-            Boolean is_name = !String.IsNullOrEmpty(Convert.ToString(vt["name"]));
-            if (is_name)
-            {
-                String queryUpdate = "UPDATE public.user_types SET name = '" + vt["name"] + "'  WHERE id = '" + id + "' ";
-                MData data = new MData();
-                ResponseDTO responseBD = data.execute(queryUpdate);
-                return new ResponseDTO(true, JsonConvert.SerializeObject(userType), "");
-            }
-            else
-            {
-                return new ResponseDTO(false, "", "No envio ningun parametro para actualizar");
+            ZooFunctions zF = new ZooFunctions();
 
-            }
+            Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(userType));
+            String queryUpdate = zF.GenerateUpdateQuery("user_types", id, listTemp);
+            return new ResponseDTO(true, JsonConvert.SerializeObject(userType), "");
+        }
 
-
+        public ResponseDTO DeleteUserType(int id)
+        {
+            String queryDelete = "DELETE FROM public.user_types WHERE id = '" + id + "' ";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryDelete);
+            return new ResponseDTO(true, "", "");
         }
     }
 }
