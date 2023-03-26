@@ -14,7 +14,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddUserType(UserTypeDTO userType)
         {
-            String queryInsert = "INSERT INTO public.user_types(name) VALUES ('"+userType.name+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.user_types(name) VALUES ('" + userType.name + "') RETURNING *";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 
@@ -22,7 +22,27 @@ namespace Zoo.Models
             JArray array = JArray.Parse(responseBD.data);
             JObject uT = JObject.Parse(Convert.ToString(array[0]));
             userType.id = Convert.ToString(uT["id"]);
-            return new ResponseDTO(true,JsonConvert.SerializeObject(userType),"");
+            return new ResponseDTO(true, JsonConvert.SerializeObject(userType), "");
+        }
+
+        public ResponseDTO UpdateUserType(int id, UserTypeDTO userType)
+        {
+            JObject vt = JObject.Parse(JsonConvert.SerializeObject(userType));
+            Boolean is_name = !String.IsNullOrEmpty(Convert.ToString(vt["name"]));
+            if (is_name)
+            {
+                String queryUpdate = "UPDATE public.user_types SET name = '" + vt["name"] + "'  WHERE id = '" + id + "' ";
+                MData data = new MData();
+                ResponseDTO responseBD = data.execute(queryUpdate);
+                return new ResponseDTO(true, JsonConvert.SerializeObject(userType), "");
+            }
+            else
+            {
+                return new ResponseDTO(false, "", "No envio ningun parametro para actualizar");
+
+            }
+
+
         }
     }
 }

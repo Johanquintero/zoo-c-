@@ -28,7 +28,14 @@ namespace Zoo.Controllers
         public async Task<IActionResult> UpdateZone(int id, ZoneUpdateDTO zoneUpdate)
         {
             MZone mZone = new MZone();
-            return Ok(mZone.UpdateZone(id,zoneUpdate));
+            return Ok(mZone.UpdateZone(id, zoneUpdate));
+        }
+
+        [HttpDelete("delete-zone/{id}")]
+        public async Task<IActionResult> DeleteZone(int id)
+        {
+            MZone mZone = new MZone();
+            return Ok(mZone.DeleteZone(id));
         }
 
     }

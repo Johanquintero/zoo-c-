@@ -30,7 +30,7 @@ namespace Zoo.Models
             JObject zon = JObject.Parse(JsonConvert.SerializeObject(zoneEdit));
             Boolean is_name = !String.IsNullOrEmpty(Convert.ToString(zon["name"]));
             Boolean is_extension = !String.IsNullOrEmpty(Convert.ToString(zon["extention"]));
-            
+
             String queryUpdate = "UPDATE public.zones SET " +
             (is_name ? $"name = '{zon["name"]}'" : "") +
             (is_extension ? (is_name ? "," : "") + $" extention = '{zon["extention"]}' " : "") +
@@ -43,6 +43,12 @@ namespace Zoo.Models
             return new ResponseDTO(true, JsonConvert.SerializeObject(zoneEdit), "");
 
         }
-
+        public ResponseDTO DeleteZone(int id)
+        {
+            String queryDelete = "DELETE FROM public.zones WHERE id = '" + id + "' ";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryDelete);
+            return new ResponseDTO(true, "", "");
+        }
     }
 }

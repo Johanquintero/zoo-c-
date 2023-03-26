@@ -30,5 +30,13 @@ namespace Zoo.Controllers
             MVegetationType mVegetationType = new MVegetationType();
             return Ok(mVegetationType.UpdateVegetationType(id, vtUptade));
         }
+
+        [HttpDelete("delete-vegetation-type/{id}")]
+        public async Task<IActionResult> DeleteVegetationType(int id)
+        {
+            MVegetationType mVT = new MVegetationType();
+            return Ok(mVT.DeleteVegetationType(id));
+        }
+
     }
 }

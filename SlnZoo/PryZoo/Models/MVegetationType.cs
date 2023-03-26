@@ -40,5 +40,14 @@ namespace Zoo.Models
             return new ResponseDTO(true, JsonConvert.SerializeObject(vtUpdate), "");
 
         }
+
+        public ResponseDTO DeleteVegetationType(int id)
+        {
+            String queryDelete = "DELETE FROM public.vegetation_types WHERE id = '" + id + "' ";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(queryDelete);
+            return new ResponseDTO(true, "", "");
+        }
+
     }
 }
