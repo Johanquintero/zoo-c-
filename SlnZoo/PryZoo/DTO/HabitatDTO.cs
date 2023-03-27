@@ -15,4 +15,17 @@ namespace Zoo.DTO
         }
 
     }
+    public class HabitatUpdateDTO
+    {
+        public string? name { get; set; }
+        public string? weather { get; set; }
+        public string? vegetation_type_id { get; set; }
+        public HabitatUpdateDTO(string name, string? weather, string vegetation_type_id)
+        {
+            this.name = name;
+            this.weather = weather;
+            this.vegetation_type_id = vegetation_type_id;
+
+        }
+    }
 }

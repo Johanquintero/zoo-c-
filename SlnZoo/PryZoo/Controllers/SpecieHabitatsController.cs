@@ -23,5 +23,18 @@ namespace Zoo.Controllers
             MSpecieHabitat mSpecieHabitat = new MSpecieHabitat();
             return Ok(mSpecieHabitat.AddSpecieHabitat(SpecieHabitat));
         }
+        [HttpPut("update-specie-habitat/{id}")]
+        public async Task<IActionResult> UpdateSpecieHabitat(int id, SpecieHabitatUpdateDTO specieHabitatUpdate)
+        {
+            MSpecieHabitat mSpecieHabitat = new MSpecieHabitat();
+            return Ok(mSpecieHabitat.UpdateSpecieHabitat(id, specieHabitatUpdate));
+        }
+
+        [HttpDelete("delete-specie-habitat/{id}")]
+        public async Task<IActionResult> DeleteSpecieHabitat(int id)
+        {
+            MSpecieHabitat mSpecieHabitat = new MSpecieHabitat();
+            return Ok(mSpecieHabitat.DeleteSpecieHabitat(id));
+        }
     }
 }

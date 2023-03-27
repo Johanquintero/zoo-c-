@@ -116,3 +116,4 @@ E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\zoo-c-\SlnZoo\PryZoo\obj\D
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\zoo-c-\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.pdb
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\zoo-c-\SlnZoo\PryZoo\obj\Debug\net6.0\PryZoo.genruntimeconfig.cache
 E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\zoo-c-\SlnZoo\PryZoo\obj\Debug\net6.0\ref\PryZoo.dll
+C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo\bin\Debug\net6.0\package-lock.json

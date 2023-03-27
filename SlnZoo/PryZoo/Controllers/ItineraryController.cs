@@ -6,22 +6,35 @@ namespace Zoo.Controllers
 {
     [ApiController]
     [Route("zoo-api/")]
-    public class IntineraryController : Controller
+    public class ItineraryController : Controller
     {
-        public IntineraryController() { }
+        public ItineraryController() { }
 
         [HttpGet("get-Itineraries")]
         public async Task<IActionResult> GetItineraries()
         {
-            // ItineraryDTO Intinerary = new ItineraryDTO("1","Marina",5000);
+            // ItineraryDTO Itinerary = new ItineraryDTO("1","Marina",5000);
             return Ok(1);
         }
 
-        [HttpPost("add-intinerary")]
-        public async Task<IActionResult> AddItineraries(ItineraryDTO Intinerary)
+        [HttpPost("add-itinerary")]
+        public async Task<IActionResult> AddItineraries(ItineraryDTO Itinerary)
         {
             MItinerary MItinerary = new MItinerary();
-            return Ok(MItinerary.AddItinerary(Intinerary));
+            return Ok(MItinerary.AddItinerary(Itinerary));
+        }
+        [HttpPut("update-itinerary/{id}")]
+        public async Task<IActionResult> UpdateItinerary(int id, ItineraryUpdateDTO itineraryUpdate)
+        {
+            MItinerary mItinerary = new MItinerary();
+            return Ok(mItinerary.UpdateItinerary(id, itineraryUpdate));
+        }
+
+        [HttpDelete("delete-itinerary/{id}")]
+        public async Task<IActionResult> DeleteItinerary(int id)
+        {
+            MItinerary mItinerary = new MItinerary();
+            return Ok(mItinerary.DeleteItinerary(id));
         }
     }
 }

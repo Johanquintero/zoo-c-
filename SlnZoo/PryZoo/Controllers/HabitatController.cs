@@ -23,5 +23,18 @@ namespace Zoo.Controllers
             MHabitat Mhabitat = new MHabitat();
             return Ok(Mhabitat.AddHabitat(Habitat));
         }
+        [HttpPut("update-habitat/{id}")]
+        public async Task<IActionResult> UpdateHabitat(int id, HabitatUpdateDTO habitatUpdate)
+        {
+            MHabitat mHabitat = new MHabitat();
+            return Ok(mHabitat.UpdateHabitat(id, habitatUpdate));
+        }
+
+        [HttpDelete("delete-habitat/{id}")]
+        public async Task<IActionResult> DeleteHabitat(int id)
+        {
+            MHabitat mHabitat = new MHabitat();
+            return Ok(mHabitat.DeleteHabitat(id));
+        }
     }
 }

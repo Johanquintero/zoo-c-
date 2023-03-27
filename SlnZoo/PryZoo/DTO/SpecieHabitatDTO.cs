@@ -10,7 +10,16 @@ namespace Zoo.DTO
             this.id = id;
             this.specie = specie;
             this.habitat = habitat;
-
         }
-}
+    }
+    public class SpecieHabitatUpdateDTO
+    {
+        public string? specie_id { get; set; }
+        public string? habitat_id { get; set; }
+        public SpecieHabitatUpdateDTO(string specie_id, string habitat_id)
+        {
+            this.specie_id = specie_id;
+            this.habitat_id = habitat_id;
+        }
+    }
 }
