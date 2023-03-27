@@ -5,32 +5,32 @@ using Zoo.Models;
 namespace Zoo.Controllers
 {
     [ApiController]
-    [Route("zoo-api/")]
+    [Route("zoo/api/")]
     public class HabitatController : Controller
     {
         public HabitatController() { }
 
-        [HttpGet("get-habitats")]
+        [HttpGet("habitat")]
         public async Task<IActionResult> GetHabitats()
         {
             // HabitatDTO Habitat = new HabitatDTO("1","Marina","calido");
             return Ok(1);
         }
 
-        [HttpPost("add-habitat")]
+        [HttpPost("habitat")]
         public async Task<IActionResult> AddHabitats(HabitatDTO Habitat)
         {
             MHabitat Mhabitat = new MHabitat();
             return Ok(Mhabitat.AddHabitat(Habitat));
         }
-        [HttpPut("update-habitat/{id}")]
+        [HttpPut("habitat/{id}")]
         public async Task<IActionResult> UpdateHabitat(int id, HabitatUpdateDTO habitatUpdate)
         {
             MHabitat mHabitat = new MHabitat();
             return Ok(mHabitat.UpdateHabitat(id, habitatUpdate));
         }
 
-        [HttpDelete("delete-habitat/{id}")]
+        [HttpDelete("habitat/{id}")]
         public async Task<IActionResult> DeleteHabitat(int id)
         {
             MHabitat mHabitat = new MHabitat();
