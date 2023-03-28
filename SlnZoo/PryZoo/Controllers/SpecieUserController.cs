@@ -5,33 +5,33 @@ using Zoo.Models;
 namespace Zoo.Controllers
 {
     [ApiController]
-    [Route("zoo-api/")]
+    [Route("zoo/api/")]
     public class SpecieUserController : Controller
     {
         public SpecieUserController() { }
 
-        [HttpGet("get-specie-users")]
+        [HttpGet("specie-user")]
         public async Task<IActionResult> GetSpecieUsers()
         {
             // SpecieUserDTO SpecieUser = new SpecieUserDTO("1","Marina",5000);
             return Ok(1);
         }
 
-        [HttpPost("add-specie-user")]
+        [HttpPost("specie-user")]
         public async Task<IActionResult> AddSpecieUsers(SpecieUserDTO SpecieUser)
         {
             MSpecieUser mSpecieUser = new MSpecieUser();
             return Ok(mSpecieUser.AddSpecieUser(SpecieUser));
         }
 
-         [HttpPut("update-specie-user/{id}")]
+         [HttpPut("specie-user/{id}")]
         public async Task<IActionResult> UpdateSpecieUsers(int id, SpecieUserUpdateDTO specieUserUpdateDTO)
         {
             MSpecieUser mSpecieUser = new MSpecieUser();
             return Ok(mSpecieUser.UpdateSpecieUsers(id, specieUserUpdateDTO));
         }
 
-        [HttpPut("delete-specie-user/{id}")]
+        [HttpDelete("pecie-user/{id}")]
         public async Task<IActionResult> DeleteSpecieUsers(int id)
         {
             MSpecieUser mSpecieUser = new MSpecieUser();

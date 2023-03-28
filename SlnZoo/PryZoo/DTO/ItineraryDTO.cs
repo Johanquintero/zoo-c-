@@ -20,4 +20,22 @@ namespace Zoo.DTO
         }
     }
 
+    public class ItineraryUpdateDTO
+    {
+        public string? init_datetime { get; set; }
+        public string? end_datetime { get; set; }
+        public float? distance { get; set; }
+        public int? visitors { get; set; }
+        public string? user_id { get; set; }
+        public ItineraryUpdateDTO(string init_datetime, string end_datetime, float distance, int visitors, string? user_id)
+        {
+            this.init_datetime = init_datetime;
+            this.end_datetime = end_datetime;
+            this.distance = distance;
+            this.visitors = visitors;
+            this.user_id = user_id;
+
+        }
+    }
+
 }
