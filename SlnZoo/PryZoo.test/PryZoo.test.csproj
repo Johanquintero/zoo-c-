@@ -21,7 +21,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-   <ProjectReference Include="../PryZoo/PryZoo.csproj" />
+    <ProjectReference Include="..\PryZoo\PryZoo.csproj" />
   </ItemGroup>
 
 </Project>

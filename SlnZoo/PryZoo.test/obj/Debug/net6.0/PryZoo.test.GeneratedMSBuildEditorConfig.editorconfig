@@ -7,4 +7,8 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PryZoo.test
+<<<<<<< HEAD
 build_property.ProjectDir = E:\Universidad\Linea de Enfasis 2\proyectoUniversidad\zoo-c-\SlnZoo\PryZoo.test\
+=======
+build_property.ProjectDir = C:\Users\pined\OneDrive\Escritorio\Zoo\SlnZoo\PryZoo.test\
+>>>>>>> b77dcd009ca565c1c244a1202121e4710d2a49c0

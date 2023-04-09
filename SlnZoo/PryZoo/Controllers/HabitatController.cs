@@ -13,8 +13,8 @@ namespace Zoo.Controllers
         [HttpGet("habitat")]
         public async Task<IActionResult> GetHabitats()
         {
-            // HabitatDTO Habitat = new HabitatDTO("1","Marina","calido");
-            return Ok(1);
+            MHabitat MHabitat = new MHabitat();
+            return Ok(MHabitat.GetHabitat());
         }
 
         [HttpPost("habitat")]

@@ -6196,11 +6196,16 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\quint\\.nuget\\packages\\": {}
+=======
+    "C:\\Users\\pined\\.nuget\\packages\\": {}
+>>>>>>> b77dcd009ca565c1c244a1202121e4710d2a49c0
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\zoo-c-\\SlnZoo\\PryZoo.test\\PryZoo.test.csproj",
       "projectName": "PryZoo.test",
       "projectPath": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\zoo-c-\\SlnZoo\\PryZoo.test\\PryZoo.test.csproj",
@@ -6209,6 +6214,16 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\quint\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+      "projectUniqueName": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo.test\\PryZoo.test.csproj",
+      "projectName": "PryZoo.test",
+      "projectPath": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo.test\\PryZoo.test.csproj",
+      "packagesPath": "C:\\Users\\pined\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo.test\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\pined\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> b77dcd009ca565c1c244a1202121e4710d2a49c0
       ],
       "originalTargetFrameworks": [
         "net6.0"
@@ -6220,8 +6235,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\zoo-c-\\SlnZoo\\PryZoo\\PryZoo.csproj": {
               "projectPath": "E:\\Universidad\\Linea de Enfasis 2\\proyectoUniversidad\\zoo-c-\\SlnZoo\\PryZoo\\PryZoo.csproj"
+=======
+            "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo\\PryZoo.csproj": {
+              "projectPath": "C:\\Users\\pined\\OneDrive\\Escritorio\\Zoo\\SlnZoo\\PryZoo\\PryZoo.csproj"
+>>>>>>> b77dcd009ca565c1c244a1202121e4710d2a49c0
             }
           }
         }
