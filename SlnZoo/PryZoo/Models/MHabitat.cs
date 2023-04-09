@@ -38,7 +38,7 @@ namespace Zoo.Models
         }
         public ResponseDTO DeleteHabitat(int id)
         {
-            String queryDelete = "DELETE FROM public.habitat WHERE id = '" + id + "' ";
+            String queryDelete = "DELETE FROM public.habitats WHERE id = '" + id + "' ";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");

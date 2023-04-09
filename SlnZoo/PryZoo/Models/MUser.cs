@@ -43,5 +43,12 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
+        public ResponseDTO GetUser()
+        {
+            String query = "SELECT * FROM public.users;";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(query);
+            return responseBD;
+        }
     }
 }

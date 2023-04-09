@@ -15,19 +15,19 @@ namespace Zoo.Models
 
         public ResponseDTO AddSpecie(SpecieDTO Specie)
         {
-            String queryInsert = "INSERT INTO public.species(scientific_name,description,zone_id) VALUES ('"+Specie.scientific_name+"','"+Specie.description+"','"+Specie.zone.id+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.species(scientific_name,description,zone_id) VALUES ('" + Specie.scientific_name + "','" + Specie.description + "','" + Specie.zone.id + "') RETURNING *";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 
             JArray array = JArray.Parse(responseBD.data);
             JObject specie = JObject.Parse(Convert.ToString(array[0]));
             Specie.id = Convert.ToString(specie["id"]);
-            return new ResponseDTO(true,JsonConvert.SerializeObject(Specie),"");
+            return new ResponseDTO(true, JsonConvert.SerializeObject(Specie), "");
         }
         public ResponseDTO UpdateSpecie(int id, SpecieUpdateDTO specieEdit)
         {
             ZooFunctions zF = new ZooFunctions();
-            
+
             Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(specieEdit));
             String queryUpdate = zF.GenerateUpdateQuery("species", id, listTemp);
 
@@ -42,6 +42,13 @@ namespace Zoo.Models
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
+        }
+        public ResponseDTO GetSpecie()
+        {
+            String query = "SELECT * FROM public.species;";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(query);
+            return responseBD;
         }
     }
 }

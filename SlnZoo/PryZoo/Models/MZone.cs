@@ -29,7 +29,7 @@ namespace Zoo.Models
         public ResponseDTO UpdateZone(int id, ZoneUpdateDTO zoneEdit)
         {
             ZooFunctions zF = new ZooFunctions();
-            
+
             Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(zoneEdit));
             String queryUpdate = zF.GenerateUpdateQuery("zones", id, listTemp);
 
@@ -44,6 +44,13 @@ namespace Zoo.Models
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
+        }
+        public ResponseDTO GetZone()
+        {
+            String query = "SELECT * FROM public.zones;";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(query);
+            return responseBD;
         }
     }
 }

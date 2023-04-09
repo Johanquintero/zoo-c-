@@ -15,7 +15,7 @@ namespace Zoo.Models
 
         public ResponseDTO AddSpecieHabitat(SpecieHabitatDTO SpecieHabitat)
         {
-            String queryInsert = "INSERT INTO public.specie_habitats(specie_id, habitat_id) VALUES ('"+SpecieHabitat.specie.id+"','"+SpecieHabitat.habitat.id+"') RETURNING *";
+            String queryInsert = "INSERT INTO public.specie_habitats(specie_id, habitat_id) VALUES ('" + SpecieHabitat.specie.id + "','" + SpecieHabitat.habitat.id + "') RETURNING *";
             Console.WriteLine(queryInsert);
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
@@ -23,14 +23,14 @@ namespace Zoo.Models
             JArray array = JArray.Parse(responseBD.data);
             JObject sh = JObject.Parse(Convert.ToString(array[0]));
             SpecieHabitat.id = Convert.ToString(sh["id"]);
-            return new ResponseDTO(true,JsonConvert.SerializeObject(SpecieHabitat),"");
+            return new ResponseDTO(true, JsonConvert.SerializeObject(SpecieHabitat), "");
         }
         public ResponseDTO UpdateSpecieHabitat(int id, SpecieHabitatUpdateDTO specieHabitatEdit)
         {
             ZooFunctions zF = new ZooFunctions();
-            
+
             Dictionary<string, string> listTemp = zF.GenerateList(JsonConvert.SerializeObject(specieHabitatEdit));
-            String queryUpdate = zF.GenerateUpdateQuery("specie_habitat", id, listTemp);
+            String queryUpdate = zF.GenerateUpdateQuery("specie_habitats", id, listTemp);
 
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryUpdate);
@@ -39,10 +39,17 @@ namespace Zoo.Models
         }
         public ResponseDTO DeleteSpecieHabitat(int id)
         {
-            String queryDelete = "DELETE FROM public.specie_habitat WHERE id = '" + id + "' ";
+            String queryDelete = "DELETE FROM public.specie_habitats WHERE id = '" + id + "' ";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
+        }
+        public ResponseDTO GetSpecieHabitat()
+        {
+            String query = "SELECT * FROM public.specie_habitats;";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(query);
+            return responseBD;
         }
     }
 }

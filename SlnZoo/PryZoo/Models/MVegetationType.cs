@@ -43,6 +43,14 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
+        
+        public ResponseDTO GetVegetationType()
+        {
+            String query = "SELECT * FROM public.vegetation_types;";
+            MData data = new MData();
+            ResponseDTO responseBD = data.execute(query);
+            return responseBD;
+        }
 
     }
 }
