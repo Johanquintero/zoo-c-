@@ -13,8 +13,8 @@ namespace Zoo.Controllers
         [HttpGet("itinerary")]
         public async Task<IActionResult> GetItineraries()
         {
-            // ItineraryDTO Itinerary = new ItineraryDTO("1","Marina",5000);
-            return Ok(1);
+            MItinerary MItinerary = new MItinerary();
+            return Ok(MItinerary.GetItinerary());
         }
 
         [HttpPost("itinerary")]

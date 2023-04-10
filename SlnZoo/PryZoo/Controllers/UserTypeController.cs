@@ -13,8 +13,8 @@ namespace Zoo.Controllers
         [HttpGet("user-type")]
         public async Task<IActionResult> GetUserTypes()
         {
-            UserTypeDTO userType = new UserTypeDTO("1","Cuidador");
-            return Ok(userType);
+            MUserType MUserType = new MUserType();
+            return Ok(MUserType.GetUserType());
         }
 
        [HttpPost("user-type")]

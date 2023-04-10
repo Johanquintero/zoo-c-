@@ -15,8 +15,8 @@ namespace Zoo.Controllers
         [HttpGet("zone")]
         public async Task<IActionResult> GetZones()
         {
-            ZoneDTO zone = new ZoneDTO("1", "Marina", 5000);
-            return Ok(zone);
+            MZone MZone = new MZone();
+            return Ok(MZone.GetZone());
         }
 
         [HttpPost("zone")]

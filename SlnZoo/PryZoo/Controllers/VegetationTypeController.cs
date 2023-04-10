@@ -13,8 +13,8 @@ namespace Zoo.Controllers
         [HttpGet("vegetation-type")]
         public async Task<IActionResult> GetVegetationTypes()
         {
-            VegetationTypeDTO vT = new VegetationTypeDTO("1", "Marina", "asdasd");
-            return Ok(vT);
+            MVegetationType MVegetationType = new MVegetationType();
+            return Ok(MVegetationType.GetVegetationType());
         }
 
         [HttpPost("vegetation-type")]

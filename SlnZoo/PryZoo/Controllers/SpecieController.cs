@@ -13,8 +13,8 @@ namespace Zoo.Controllers
         [HttpGet("specie")]
         public async Task<IActionResult> GetSpecies()
         {
-            // SpecieDTO Specie = new SpecieDTO("1","Marina",5000);
-            return Ok(1);
+            MSpecie MSpecie = new MSpecie();
+            return Ok(MSpecie.GetSpecie());
         }
 
         [HttpPost("specie")]
