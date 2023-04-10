@@ -18,8 +18,6 @@ namespace Zoo.Models
             MData data = new MData();
             ResponseDTO responseBD = data.execute(queryInsert);
 
-            // return responseBD;
-            /* Parsing the response from the database. */
             JArray array = JArray.Parse(responseBD.data);
             JObject zon = JObject.Parse(Convert.ToString(array[0]));
             zone.id = Convert.ToString(zon["id"]);

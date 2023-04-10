@@ -16,10 +16,18 @@ namespace Zoo.Models
         public ResponseDTO AddItinerary(ItineraryDTO Itinerary)
         {
             String queryInsert = "INSERT INTO public.itineraries(init_datetime,end_datetime, distance, visitors,user_id) VALUES ('" + Itinerary.init_datetime + "','" + Itinerary.end_datetime + "','" + Itinerary.distance + "','" + Itinerary.visitors + "','" + Itinerary.user.id + "') RETURNING *";
-            Console.WriteLine(queryInsert);
+            String queryVerify = "SELECT * FROM itineraries WHERE  user_id = " + Itinerary.user.id + " AND '" + Itinerary.init_datetime + "' BETWEEN init_datetime AND end_datetime AND '" + Itinerary.end_datetime + "' BETWEEN init_datetime AND end_datetime";
+            Console.WriteLine(queryVerify);
             MData data = new MData();
-            ResponseDTO responseBD = data.execute(queryInsert);
+            ResponseDTO responseVerify = data.execute(queryVerify);
+            JArray arrayVerify = JArray.Parse(responseVerify.data);
+            if (arrayVerify.Count() > 0)
+            {
+                return new ResponseDTO(false, arrayVerify.ToString(), "No es posible asignar un nuevo itinerario, los horarios están ocupados");
+            }
 
+
+            ResponseDTO responseBD = data.execute(queryInsert);
             JArray array = JArray.Parse(responseBD.data);
             JObject iti = JObject.Parse(Convert.ToString(array[0]));
             Itinerary.id = Convert.ToString(iti["id"]);
