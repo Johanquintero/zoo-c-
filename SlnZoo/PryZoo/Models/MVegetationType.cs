@@ -44,9 +44,14 @@ namespace Zoo.Models
             return new ResponseDTO(true, "", "");
         }
         
-        public ResponseDTO GetVegetationType()
+        public ResponseDTO GetVegetationType(int id=0)
         {
-            String query = "SELECT * FROM public.vegetation_types;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE vegetation_types.id = " + id + "";
+            }
+            String query = "SELECT * FROM public.vegetation_types "+query_condition +";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

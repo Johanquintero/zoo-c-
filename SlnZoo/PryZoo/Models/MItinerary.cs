@@ -52,9 +52,14 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
-        public ResponseDTO GetItinerary()
+        public ResponseDTO GetItinerary(int id = 0)
         {
-            String query = "SELECT * FROM public.itineraries;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE itineraries.id = " + id + "";
+            }
+            String query = "SELECT users.name, users.id as user_id, itineraries.* FROM public.itineraries inner join users on users.id = itineraries.user_id "+query_condition+";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

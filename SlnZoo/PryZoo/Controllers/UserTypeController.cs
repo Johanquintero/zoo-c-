@@ -10,11 +10,11 @@ namespace Zoo.Controllers
     {
         public UserTypeController() { }
 
-        [HttpGet("user-type")]
-        public async Task<IActionResult> GetUserTypes()
+        [HttpGet("user-type/{id}")]
+        public async Task<IActionResult> GetUserTypes(int id = 0)
         {
             MUserType MUserType = new MUserType();
-            return Ok(MUserType.GetUserType());
+            return Ok(MUserType.GetUserType(id));
         }
 
        [HttpPost("user-type")]

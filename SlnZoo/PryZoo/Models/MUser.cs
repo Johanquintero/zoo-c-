@@ -43,9 +43,14 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
-        public ResponseDTO GetUser()
+        public ResponseDTO GetUser(int id=0)
         {
-            String query = "SELECT * FROM public.users;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE users.id = " + id + "";
+            }
+            String query = "SELECT users.*, user_types.name user_type, user_types.description FROM PUBLIC.users INNER JOIN user_types ON user_types.id = users.user_type_id "+query_condition+";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

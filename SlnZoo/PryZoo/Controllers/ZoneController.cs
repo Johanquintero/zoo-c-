@@ -12,11 +12,11 @@ namespace Zoo.Controllers
     {
         public ZoneController() { }
 
-        [HttpGet("zone")]
-        public async Task<IActionResult> GetZones()
+        [HttpGet("zone/{id}")]
+        public async Task<IActionResult> GetZones(int id = 0)
         {
             MZone MZone = new MZone();
-            return Ok(MZone.GetZone());
+            return Ok(MZone.GetZone(id));
         }
 
         [HttpPost("zone")]

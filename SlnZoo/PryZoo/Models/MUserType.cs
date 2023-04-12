@@ -45,9 +45,14 @@ namespace Zoo.Models
             return new ResponseDTO(true, "", "");
         }
 
-        public ResponseDTO GetUserType()
+        public ResponseDTO GetUserType(int id=0)
         {
-            String query = "SELECT * FROM public.user_types;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE user_types.id = " + id + "";
+            }
+            String query = "SELECT * FROM public.user_types "+query_condition+";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

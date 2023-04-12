@@ -10,11 +10,11 @@ namespace Zoo.Controllers
     {
         public SpecieHabitatController() { }
 
-        [HttpGet("specie-habitat")]
-        public async Task<IActionResult> GetSpecieHabitats()
+        [HttpGet("specie-habitat/{id}")]
+        public async Task<IActionResult> GetSpecieHabitats(int id = 0)
         {
             MSpecieHabitat MSpecieHabitat = new MSpecieHabitat();
-            return Ok(MSpecieHabitat.GetSpecieHabitat());
+            return Ok(MSpecieHabitat.GetSpecieHabitat(id));
         }
 
         [HttpPost("specie-habitat")]

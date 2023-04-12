@@ -43,8 +43,13 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
-        public ResponseDTO GetHabitat() {
-            String query = "SELECT * FROM public.habitats;";
+        public ResponseDTO GetHabitat(int id) {
+            String query_condition = "";
+            if(id != 0){
+                query_condition = "WHERE habitats.id = "+id+"";
+            }
+            
+            String query = "SELECT habitats.*, vegetation_types.name as vegetation_type, vegetation_types.description FROM public.habitats inner join vegetation_types on vegetation_types.id = habitats.vegetation_type_id "+query_condition+" ;";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

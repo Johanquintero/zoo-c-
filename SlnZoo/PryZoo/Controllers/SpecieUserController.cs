@@ -10,11 +10,11 @@ namespace Zoo.Controllers
     {
         public SpecieUserController() { }
 
-        [HttpGet("specie-user")]
-        public async Task<IActionResult> GetSpecieUsers()
+        [HttpGet("specie-user/{id}")]
+        public async Task<IActionResult> GetSpecieUsers(int id = 0)
         {
             MSpecieUser MSpecieUser = new MSpecieUser();
-            return Ok(MSpecieUser.GetSpecieUsers());
+            return Ok(MSpecieUser.GetSpecieUsers(id));
         }
 
         [HttpPost("specie-user")]

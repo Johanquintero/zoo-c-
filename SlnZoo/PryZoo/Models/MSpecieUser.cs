@@ -42,9 +42,14 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
-        public ResponseDTO GetSpecieUsers()
+        public ResponseDTO GetSpecieUsers(int id=0)
         {
-            String query = "SELECT * FROM public.specie_users;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE specie_users.id = " + id + "";
+            }
+            String query = "SELECT specie_users.id, users.name as habitat, species.scientific_name, species.description FROM PUBLIC.specie_users INNER JOIN species ON species.ID = specie_users.specie_id INNER JOIN users ON specie_users.user_id = users.ID "+query_condition+";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

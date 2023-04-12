@@ -43,9 +43,14 @@ namespace Zoo.Models
             ResponseDTO responseBD = data.execute(queryDelete);
             return new ResponseDTO(true, "", "");
         }
-        public ResponseDTO GetZone()
+        public ResponseDTO GetZone(int id=0)
         {
-            String query = "SELECT * FROM public.zones;";
+            String query_condition = "";
+            if (id != 0)
+            {
+                query_condition = "WHERE zones.id = " + id + "";
+            }
+            String query = "SELECT * FROM public.zones "+query_condition+";";
             MData data = new MData();
             ResponseDTO responseBD = data.execute(query);
             return responseBD;

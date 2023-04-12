@@ -10,11 +10,11 @@ namespace Zoo.Controllers
     {
         public VegetationTypeController() { }
 
-        [HttpGet("vegetation-type")]
-        public async Task<IActionResult> GetVegetationTypes()
+        [HttpGet("vegetation-type/{id}")]
+        public async Task<IActionResult> GetVegetationTypes(int id = 0)
         {
             MVegetationType MVegetationType = new MVegetationType();
-            return Ok(MVegetationType.GetVegetationType());
+            return Ok(MVegetationType.GetVegetationType(id));
         }
 
         [HttpPost("vegetation-type")]

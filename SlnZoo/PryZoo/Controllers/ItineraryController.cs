@@ -10,11 +10,11 @@ namespace Zoo.Controllers
     {
         public ItineraryController() { }
 
-        [HttpGet("itinerary")]
-        public async Task<IActionResult> GetItineraries()
+        [HttpGet("itinerary/{id}")]
+        public async Task<IActionResult> GetItineraries(int id = 0)
         {
             MItinerary MItinerary = new MItinerary();
-            return Ok(MItinerary.GetItinerary());
+            return Ok(MItinerary.GetItinerary(id));
         }
 
         [HttpPost("itinerary")]
